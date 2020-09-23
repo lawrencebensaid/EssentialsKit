@@ -1,5 +1,5 @@
 import XCTest
-@testable import EssentialsKit
+@testable // import EssentialsKit
 
 final class EssentialsKitTests: XCTestCase {
     func testExample() {
