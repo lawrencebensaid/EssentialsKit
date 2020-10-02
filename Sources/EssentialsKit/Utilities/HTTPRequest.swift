@@ -15,12 +15,19 @@ public struct HTTPRequest: Equatable {
     
     public var method: HTTPMethodType
     
-    public var body: [String: String]
+    public var body: [String: Any]
     
     public var headers: [String: String]
     
     
     public init(uri: URL, method: HTTPMethodType = .get, headers: [String: String] = [:], body: [String: String] = [:]) {
+        self.uri = uri
+        self.method = method
+        self.headers = headers
+        self.body = body
+    }
+    
+    public init(uri: URL, method: HTTPMethodType = .get, headers: [String: Any] = [:], body: [String: String] = [:]) {
         self.uri = uri
         self.method = method
         self.headers = headers
