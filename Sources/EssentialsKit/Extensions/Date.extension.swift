@@ -24,10 +24,20 @@ extension Date {
     public var millisecondsSince1970: Int64 {
         return Int64((self.timeIntervalSince1970 * 1000.0).rounded())
     }
+    
+    public init?(secondsSince1970: Int?) {
+        guard let seconds = secondsSince1970 else { return nil }
+        self = Date(timeIntervalSince1970: TimeInterval(seconds))
+    }
 
     public init?(secondsSince1970: Int64?) {
         guard let seconds = secondsSince1970 else { return nil }
         self = Date(timeIntervalSince1970: TimeInterval(seconds))
+    }
+    
+    public init?(millisecondsSince1970: Int?) {
+        guard let milliseconds = millisecondsSince1970 else { return nil }
+        self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
     }
     
     public init?(millisecondsSince1970: Int64?) {
