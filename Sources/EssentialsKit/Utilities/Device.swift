@@ -9,7 +9,7 @@ import UIKit
 import SystemConfiguration
 
 @available(iOS 10, *)
-class Device {
+public class Device {
     
     public static let current = Device()
     
