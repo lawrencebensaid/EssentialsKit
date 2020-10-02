@@ -5,14 +5,21 @@
 //  Created by Lawrence Bensaid on 02/10/2020.
 //
 
-import Foundation
+import UIKit
+import SystemConfiguration
 
-@available(iOS 11, *)
+@available(iOS 10, *)
 class Device {
     
     public static let current = Device()
     
-    public let model: String {
+    public var name: String {
+        get {
+            UIDevice.current.name
+        }
+    }
+    
+    public var model: String {
         get {
             var sysinfo = utsname()
             uname(&sysinfo)
@@ -20,7 +27,13 @@ class Device {
         }
     }
     
-    public let osName: String {
+    public var modelName: String {
+        get {
+            Device.modelName(model)
+        }
+    }
+    
+    public var osName: String {
         get {
             var name = ""
             #if os(iOS)
@@ -35,8 +48,14 @@ class Device {
         }
     }
     
-    public static func modelName(_ identifier: String? = nil) -> String {
-        let identifier = identifier ?? getModelIdentifier()
+    public var osVersion: String {
+        get {
+            UIDevice.current.systemVersion
+        }
+    }
+    
+    public static func modelName(_ identifier: String) -> String {
+        let identifier = identifier
         #if os(iOS)
         switch identifier {
         case "iPod5,1":                                 return "iPod touch (5th generation)"
@@ -88,7 +107,7 @@ class Device {
         case "AppleTV5,3":                              return "Apple TV"
         case "AppleTV6,2":                              return "Apple TV 4K"
         case "AudioAccessory1,1":                       return "HomePod"
-        case "i386", "x86_64":                          return "\(getModelName(ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS")) Simulator"
+        case "i386", "x86_64":                          return "\(modelName(ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS")) Simulator"
         default:                                        return identifier
         }
         #elseif os(tvOS)

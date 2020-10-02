@@ -8,7 +8,6 @@
 
 import Foundation
 
-@available(iOS 11, *)
 extension String  {
     
     public var localized: String {
