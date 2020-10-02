@@ -11,6 +11,10 @@ import Foundation
 @available(iOS 11, *)
 public struct HTTPRequest: Equatable {
     
+    public static func == (lhs: HTTPRequest, rhs: HTTPRequest) -> Bool {
+        lhs.uri == rhs.uri && lhs.method == rhs.method && lhs.headers == rhs.headers
+    }
+    
     public var uri: URL
     
     public var method: HTTPMethodType
@@ -27,7 +31,7 @@ public struct HTTPRequest: Equatable {
         self.body = body
     }
     
-    public init(uri: URL, method: HTTPMethodType = .get, headers: [String: Any] = [:], body: [String: String] = [:]) {
+    public init(uri: URL, method: HTTPMethodType = .get, headers: [String: String] = [:], body: [String: Any] = [:]) {
         self.uri = uri
         self.method = method
         self.headers = headers
