@@ -1,9 +1,8 @@
 //
-//  Date.swift
-// AnalytX
+//  Date.extension.swift
+//
 //
 //  Created by Lawrence Bensaid on 13/10/2019.
-//  Copyright © 2019 software-essentials. All rights reserved.
 //
 
 import Foundation
@@ -29,7 +28,7 @@ extension Date {
         guard let seconds = secondsSince1970 else { return nil }
         self = Date(timeIntervalSince1970: TimeInterval(seconds))
     }
-
+    
     public init?(secondsSince1970: Int64?) {
         guard let seconds = secondsSince1970 else { return nil }
         self = Date(timeIntervalSince1970: TimeInterval(seconds))

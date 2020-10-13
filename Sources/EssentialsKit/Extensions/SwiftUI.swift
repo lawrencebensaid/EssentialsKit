@@ -1,6 +1,6 @@
 //
 //  SwiftUI.swift
-//  Windesheim
+//
 //
 //  Created by Lawrence Bensaid on 25/08/2020.
 //

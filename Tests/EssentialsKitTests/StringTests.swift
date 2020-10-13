@@ -61,13 +61,13 @@ final class StringTests: XCTestCase {
     
 
     static var allTests = [
-        ("testStringCapitalization", testCapitalizingFirstLetter),
-        ("testStringCapitalizationEmpty", testCapitalizingFirstLetterEmpty),
-        ("testStringCapitalizationEmpty", testDeletingPrefix),
-        ("testStringCapitalizationEmpty", testDeletingPrefixEmpty),
-        ("testStringCapitalizationEmpty", testIsNumber),
-        ("testStringCapitalizationEmpty", testIsNumberNaN),
-        ("testStringCapitalizationEmpty", testIsNumberEmpty),
+        ("testCapitalizingFirstLetter", testCapitalizingFirstLetter),
+        ("testCapitalizingFirstLetterEmpty", testCapitalizingFirstLetterEmpty),
+        ("testDeletingPrefix", testDeletingPrefix),
+        ("testDeletingPrefixEmpty", testDeletingPrefixEmpty),
+        ("testIsNumber", testIsNumber),
+        ("testIsNumberNaN", testIsNumberNaN),
+        ("testIsNumberEmpty", testIsNumberEmpty),
     ]
     
 }

@@ -1,9 +1,8 @@
 //
-//  URLExtension.swift
-//  AnalytX
+//  URL.extension.swift
+//
 //
 //  Created by Lawrence Bensaid on 23/05/2019.
-//  Copyright © 2019 Software Essentials. All rights reserved.
 //
 
 #if os(iOS)

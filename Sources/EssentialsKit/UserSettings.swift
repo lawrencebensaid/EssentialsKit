@@ -1,6 +1,6 @@
 //
 //  UserSettings.swift
-//  AnalytX
+//  
 //
 //  Created by Lawrence Bensaid on 14/08/2020.
 //

@@ -1,9 +1,8 @@
 //
 //  Request.swift
-//  AnalytX
+//
 //
 //  Created by Lawrence Bensaid on 24/05/2019.
-//  Copyright © 2019 Software Essentials. All rights reserved.
 //
 
 import Foundation

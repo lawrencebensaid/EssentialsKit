@@ -1,9 +1,8 @@
 //
 //  Response.swift
-//  AnalytX
+//
 //
 //  Created by Lawrence Bensaid on 24/05/2019.
-//  Copyright © 2019 Software Essentials. All rights reserved.
 //
 
 import Foundation
@@ -43,8 +42,8 @@ public struct HTTPResponse: Equatable {
     }
     
     public func getXML() -> Any {
-//        guard let data = String(data: self.data, encoding: String.Encoding.utf8) else { return [:] }
-
+        //        guard let data = String(data: self.data, encoding: String.Encoding.utf8) else { return [:] }
+        
         let xml = XMLParser(data: self.data)
         print(xml)
         return [:]

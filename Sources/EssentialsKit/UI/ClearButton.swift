@@ -1,6 +1,6 @@
 //
 //  ClearButton.swift
-//  Windesheim (iOS)
+//  EssentialsKit
 //
 //  Created by Lawrence Bensaid on 26/08/2020.
 //

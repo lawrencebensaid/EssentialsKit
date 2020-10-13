@@ -1,9 +1,8 @@
 //
-//  StringExt.swift
-//  AnalytX
+//  String.extension.swift
+//
 //
 //  Created by Lawrence Bensaid on 03/11/2018.
-//  Copyright © 2018 Software Essentials. All rights reserved.
 //
 
 import Foundation
@@ -26,7 +25,7 @@ extension String  {
     public func capitalizingFirstLetter() -> String {
         return prefix(1).capitalized + dropFirst()
     }
-
+    
     public mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
     }

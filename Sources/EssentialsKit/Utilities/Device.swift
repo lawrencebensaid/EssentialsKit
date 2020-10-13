@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Device.swift
 //  
 //
 //  Created by Lawrence Bensaid on 02/10/2020.

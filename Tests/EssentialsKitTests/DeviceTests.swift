@@ -20,7 +20,7 @@ final class DeviceTests: XCTestCase {
     
     @available(iOS 10, *)
     static var allTests = [
-        ("testDeviceModelName", testModelName),
+        ("testModelName", testModelName),
     ]
     
 }
